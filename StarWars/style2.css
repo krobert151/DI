@@ -1,5 +1,18 @@
-@import url('https://fonts.cdnfonts.com/css/star-wars');
+@font-face {
+    font-family:'Star Wars' ;
+    src: url('/fonts/starjedi/Starjedi.ttf');
+}
+@font-face {
+    font-family:'swtitle';
+    src: url('/fonts/sf_distant_symbols/SF\ Distant\ Galaxy\ Symbols.ttf');
+}
+.swtitle{
+    font-family: 'swtitle', sans-serif;
+    color: #ffe81f;
+    font-size: xx-large;
+    text-align: center;
 
+}
 body {
     background-color: rgb(0, 0, 0);
     font-family: 'Star Wars', sans-serif;
@@ -11,17 +24,18 @@ h1 {
 
 }
 
-.buscador>form>div>span,
-.buscador>form>div>input,
-.buscador {
+.buscador>form>div>span{
     background-color: black;
 }
-
-
-input:focus {
-    color: red;
+.navmolon{
+    display: flex;
+    flex: 1 1 80%;
+    color: #ffe81f;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 78%, rgba(0,255,38,1) 82%, rgba(0,0,0,1) 85%);
+    outline: none;
+    border: none;
 }
-
 .form-control,
 .input-group-text {
     border-color: black;
@@ -45,4 +59,7 @@ input:focus {
     background: rgb(0, 0, 0);
     background: linear-gradient(310deg, rgba(0, 0, 0, 1) 73%, rgba(255, 0, 0, 1) 79%, rgba(0, 0, 0, 1) 83%);
 
+}
+.card-body,.card{
+    background-color: black;
 }
