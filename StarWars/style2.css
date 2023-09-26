@@ -1,0 +1,48 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Star Wars', sans-serif;
+    color: white;
+}
+
+h1 {
+    color: #ffe81f;
+
+}
+
+.buscador>form>div>span,
+.buscador>form>div>input,
+.buscador {
+    background-color: black;
+}
+
+
+input:focus {
+    color: red;
+}
+
+.form-control,
+.input-group-text {
+    border-color: black;
+}
+
+
+.imagediv>img {
+    width: 100%;
+    border-radius: 15pt;
+
+}
+
+.tarjetita {
+
+
+    border: 1pt solid #ffe81f;
+    border-radius: 20pt;
+}
+
+.sith {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(310deg, rgba(0, 0, 0, 1) 73%, rgba(255, 0, 0, 1) 79%, rgba(0, 0, 0, 1) 83%);
+
+}

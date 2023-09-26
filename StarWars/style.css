@@ -1,0 +1,118 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Star Wars', sans-serif;
+
+}
+
+h1 {
+    color: #ffe81f;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.card {
+    border-radius: 15pt;
+    color: white;
+
+}
+
+.jedi-blue {
+    background: rgb(18, 181, 194);
+    background: radial-gradient(circle, rgba(18, 181, 194, 1) 0%, rgba(0, 2, 24, 1) 82%);
+}
+
+.droid {
+    background: rgb(171, 163, 147);
+    background: radial-gradient(circle, rgba(171, 163, 147, 1) 0%, rgba(0, 8, 24, 1) 82%);
+}
+
+.sith {
+    background: rgb(255, 0, 0);
+    background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(0, 8, 24, 1) 82%);
+}
+
+
+.card>div>img {
+    border-radius: 15pt;
+
+}
+
+.cardBox {
+    transition: all 0.3s ease 0s;
+    margin-bottom: 20px;
+}
+
+.cardBox:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    cursor: default;
+    height: 475px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+
+.front>img {
+    height: 375px;
+
+}
+
+.card .front,
+.card .back {
+    backface-visibility: hidden;
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.cardBox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes giro {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
