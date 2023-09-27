@@ -141,20 +141,18 @@ $(document).ready(function () {
     $(document).on('click', '.cardBox', function () {
         var id = $(this).attr('id');
         alert(id);
-    });
-
-    $(document).on('click', '.pokemon', function () {
-        var pokemonId = $(this).attr('pokemonid');
-
         $.ajax({
-            url: 'https://pokeapi.co/api/v2/pokemon/' + pokemonId,
+            url: 'https://swapi.dev/api/people/' + pokemonId,
             type: 'GET'
         }).done(function (resp) {
 
-        });
+            // Lo último es mostrar el modal
+            $('#modal-detail').show();
 
-        $('#modal-detail').show();
+        });
     });
+
+
 
 
 
