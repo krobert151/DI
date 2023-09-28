@@ -19,15 +19,23 @@ $(document).ready(() => {
             i++;
         });
     });
-    $(document).on('click', '.card', function() {
+    $(document).on('click', '.card', function () {
         var personajeid = $(this).attr('personajeid');
         $.ajax({
             url: 'https://pokeapi.co/api/v2/pokemon/' + personajeid,
             type: 'GET'
-        }).done(function(poke){    
-            console.log('negros');
+        }).done(function (poke) {
+            $('.pokesprite').attr('src', poke.sprites.front_default);
             $('#name').text(poke.species.name);
-            
+            $('#height').text(poke.height);
+            $('#weight').text(poke.weight);
+            $('#type1').text(poke.types[0].type.name);
+            if (poke.types[1]) {
+                $('#type2').text('/'.concat(poke.types[1].type.name));
+            } else {
+                $('#type2').text('');
+
+            }
         });
     });
 });
