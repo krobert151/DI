@@ -36,6 +36,13 @@ $(document).ready(() => {
                 $('#type2').text('');
 
             }
+            $('#hp').text(poke.stats[0].base_stat);
+            $('#attack').text(poke.stats[1].base_stat);
+            $('#defense').text(poke.stats[2].base_stat);
+            $('#special-attack').text(poke.stats[3].base_stat);
+            $('#special-defense').text(poke.stats[4].base_stat);
+            $('#hp').text(poke.stats[5].base_stat);
+            $('#hp').text(poke.stats[6].base_stat);
         });
     });
 });
